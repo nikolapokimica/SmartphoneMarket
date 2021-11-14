@@ -1,0 +1,11 @@
+{
+    "name": "nikola/smartphone-market",
+    "description": "Student project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "app\\": ""
+        }
+    },
+    "require": {}
+}
