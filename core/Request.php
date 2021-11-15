@@ -14,7 +14,7 @@ class Request {
         $position = strpos($path, "?");
         //ako nemamo argumente samo vrati path
         if($position === false) {
-            //cita od karaktera 22 da bi preskocio SmartphoneMarket/public/
+            //cita od karaktera 25 da bi preskocio SmartphoneMarket/public/
             $path = substr($path, 25);
             return $path;
         }
