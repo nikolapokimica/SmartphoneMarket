@@ -15,7 +15,7 @@ class AuthController extends Controller {
 
     //posalji korisnika na view sa 403 access denied porukom
     public function accessDenied() {
-        return $this->route->view("accessDenied", "error");
+        return $this->router->view("accessDenied", "error");
     }
 
     //posalji korisnika na view sa 404 not found porukom
@@ -43,6 +43,9 @@ class AuthController extends Controller {
     public function registrationProcess() {
        $model = new RegistrationModel();
        $model->loadData($this->request->getAll());
+
+       //proveriti ovde da li user sa tim email-om vec postoji
+        //da baza ne vraca gresku i ispisi poruku na viewu
        $model->validate();
 
        //ako nije prosla validacija

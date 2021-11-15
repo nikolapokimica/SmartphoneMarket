@@ -1,7 +1,6 @@
 <?php
 
 namespace app\core;
-use app\controllers\UserController;
 use app\controllers\AuthController;
 
 final class Application {
@@ -40,7 +39,6 @@ final class Application {
     private function loadRoutes() {
         $this->router->get("home", "home");
         $this->router->get("", "home");
-        $this->router->get("test", "home");
         $this->router->get("index", "home");
         $this->router->get("accessDenied", [AuthController::class, "accessDenied"]);
         $this->router->get("notFound", [AuthController::class, "notFound"]);
